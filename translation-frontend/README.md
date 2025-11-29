@@ -1,35 +1,35 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
-## Getting Started
+# 🌐 Frontend : TalAIt Translator (Next.js App Router)
 
-First, run the development server:
+Cette application est l'interface utilisateur de la plateforme de traduction. Elle utilise le nouveau modèle de routage **App Router** de Next.js pour une performance et une expérience développeur optimales.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🎨 Design et Style
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+* **Framework de Style :** Tailwind CSS.
+* **Thème :** light Mode.
+* **Composant Spécial :** `AnimatedBackground.js` (génère un fond subtilement animé, avec gestion du problème d'hydratation).
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## 🗂️ Structure des Routes
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| Route | Fichier | Description | Type de Rendu |
+| :--- | :--- | :--- | :--- |
+| `/` | `src/app/page.js` | Redirection vers l'authentification. | Server Component (SSR) |
+| `/auth` | `src/app/auth/page.js` | Formulaire de Connexion/Inscription. | Client Component (CSR) |
+| `/translate` | `src/app/translate/page.js` | Interface de traduction principale. | Client Component (CSR) |
+| Layout | `src/app/layout.js` | Layout racine (Header, Footer, Background). | Server Component (SSR) |
 
-## Learn More
+## 💻 Développement Local (Sans Docker)
 
-To learn more about Next.js, take a look at the following resources:
+Pour lancer uniquement le Frontend, vous devez :
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. Avoir Node.js et npm installés.
+2. Vous assurer que le Backend tourne sur `http://localhost:8000`.
+3. Installer les dépendances :
+    ```bash
+    npm install
+    ```
+4. Lancer le serveur de développement :
+    ```bash
+    npm run dev
+    ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---

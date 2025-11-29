@@ -1,8 +1,8 @@
 // src/app/layout.js
 import './globals.css';
 import { Inter } from 'next/font/google'; 
-import Header from '@/components/Header';
-import AnimatedBackground from '@/components/AnimatedBackground';
+import Header from '../components/Header';
+import AnimatedBackground from '../components/AnimatedBackground';
 
 const inter = Inter({ subsets: ['latin'] });
 
