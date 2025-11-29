@@ -1,1 +1,0 @@
-# Plateforme-de-Traduction-Fullstack-frontend
