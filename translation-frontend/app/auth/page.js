@@ -4,7 +4,10 @@ import React, { useState } from 'react';
 import Head from 'next/head';
 import { useRouter } from 'next/navigation';
 
-const API_URL = process.env.NEXT_PUBLIC_API_URL;
+// const API_URL = process.env.NEXT_PUBLIC_API_URL;
+const API_URL = "http://localhost:8000";
+
+
 
 const AuthPage = () => {
   const [isLogin, setIsLogin] = useState(true);

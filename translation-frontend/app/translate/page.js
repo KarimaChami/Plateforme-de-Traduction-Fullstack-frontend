@@ -5,7 +5,8 @@ import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
 import { useRouter } from 'next/navigation';
 
-const API_URL = process.env.NEXT_PUBLIC_API_URL;
+// const API_URL = process.env.NEXT_PUBLIC_API_URL;
+const API_URL = "http://localhost:8000";
 
 const TranslatePage = () => {
   const [originalText, setOriginalText] = useState('');
